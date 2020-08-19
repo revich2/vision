@@ -1,0 +1,46 @@
+{
+  "name": "vision",
+  "version": "1.0.0",
+  "main": "src/index.js",
+  "repository": "git@github.com:revich2/vision.git",
+  "author": "Andrey Ivliev <as.is.ivliev@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "node --inspect=5858 -r ts-node/register ./src/index.ts",
+    "start:watch": "nodemon",
+    "build": "tsc",
+    "lint:js": "eslint . --ext=js,jsx --cache",
+    "lint:ts": "eslint . --ext=ts,tsx --cache --quiet",
+    "lint": "yarn lint:ts"
+  },
+  "devDependencies": {
+    "@types/node": "^12.0.0",
+    "@typescript-eslint/eslint-plugin": "^3.7.0",
+    "@typescript-eslint/parser": "^3.7.0",
+    "eslint": "^7.5.0",
+    "eslint-config-airbnb": "^18.2.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-jsx-a11y": "^6.3.1",
+    "eslint-plugin-prettier": "^3.1.4",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-react": "^7.20.3",
+    "eslint-plugin-react-hooks": "^4.0.8",
+    "nodemon": "^2.0.4",
+    "ts-node": "^8.10.2",
+    "typescript": "~3.7.2"
+  },
+  "nodemonConfig": {
+    "ignore": [
+      "**/*.test.ts",
+      "**/*.spec.ts",
+      ".git",
+      "node_modules"
+    ],
+    "watch": [
+      "src"
+    ],
+    "exec": "npm start",
+    "ext": "ts"
+  }
+}
